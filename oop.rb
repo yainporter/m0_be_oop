@@ -69,11 +69,12 @@ class Dragon
     def eat
         @food = @food.next
         if @food <= 3
-            "Dragon is hungry, eat some more."
+           "Dragon is hungry, eat some more."
         else
-            "Dragon is no longer hungry"
 # Why is it that this else line doesn't print, but the if line does?
+# **ONLY THE LAST LINE IS RETURNED**
             @is_hungry = false
+            "Dragon is no longer hungry"
         end
     end
 end
@@ -96,11 +97,11 @@ p dragon1
 
 class Hobbit
     attr_reader :name, :disposition, :age, :is_adult, :is_old, :has_ring
-    
-    def initialize (name, disposition)
+
+    def initialize (name, disposition, age = 0)
         @name = name
         @disposition = disposition
-        @age = 0
+        @age = age
         @is_adult = false
         @is_old = false
         @has_ring = false
