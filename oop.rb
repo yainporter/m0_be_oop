@@ -69,12 +69,10 @@ class Dragon
     def eat
         @food = @food.next
         if @food <= 3
-           "Dragon is hungry, eat some more."
+           puts "Dragon is hungry, eat some more."
         else
-# Why is it that this else line doesn't print, but the if line does?
-# **ONLY THE LAST LINE IS RETURNED**
             @is_hungry = false
-            "Dragon is no longer hungry"
+            puts "Dragon is no longer hungry"
         end
     end
 end
